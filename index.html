@@ -1,0 +1,538 @@
+<html>
+<head>
+<title>Human Face Html and CSS<title>
+</head>
+
+<style>
+
+.people {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.people-headr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.face {
+  border-radius: 11% 89% 20% 80% / 60% 58% 42% 40%;
+  border: 2px solid black;
+  height: 258px;
+  width:266px;
+  transform: rotate(45deg);
+}
+
+.head {
+  position: relative;
+}
+
+.people-hair {
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  width: 250px;
+}
+.people-hair .top {
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  background: radial-gradient(
+    circle at 50% 100%,
+    black 0 150px,
+    transparent 150px
+  );
+    transform: rotate(-26deg);
+    border-radius: 29% 104%;  
+}
+
+.fringe {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  border-radius: 100% 0% 100% 0% / 60% 10% 90% 40%;
+  height: 140px;
+  width: 98px;
+  border-right: 0px solid transparent;
+  border-top: 37px solid black;
+  border-bottom: 50px solid transparent;
+  transform: scaleX(-1) rotate(-130deg) translate(90px, 0px);
+}
+.tail {
+  position: absolute;
+  border-radius: 29% 71% 44% 56% / 60% 43% 57% 40%;
+  border-left: 30px solid black;
+  border-top: 10px solid transparent;
+  height: 200px;
+  width: 100px;
+  transform: rotate(70deg) translate(98px, -34px);
+}
+
+.top-right {
+  position: absolute;
+  border-radius: 29% 71% 44% 56% / 60% 43% 57% 40%;
+  border-left: 12px solid black;
+  border-top: 10px solid transparent;
+  height: 81px;
+  width: 44px;
+  top: 0;
+  left: 86%;
+  transform: rotate(-26deg) translate(3px, 82px) scaleX(-1);
+}
+.top-left {
+  position: absolute;
+  border-radius: 29% 71% 44% 56% / 60% 43% 57% 40%;
+  border-left: 17px solid black;
+  border-top: 10px solid transparent;
+  height: 68px;
+  width: 44px;
+  top: 0;
+  left: 80%;
+  transform: rotate(-189deg) translate(-23px, -37px);
+}
+
+.large-tail { 
+    position: absolute;
+    top: calc(150px / 2);
+    left: -40px;
+    border-radius: 44% 56% 3% 100% / 48% 46% 54% 52%;
+    border-left: 131px solid black;
+    border-right: 0px solid transparent;
+    border-top: 69px solid black;
+    height: 240px;
+    width: 61px;
+    transform: rotate(105deg) translate(-143px, -58px);   
+  
+  
+}
+
+.ear {
+  border-radius: 37% 63% 100% 0% / 16% 31% 69% 84%;
+  width: 20px;
+  height: 50px;
+  border: 2px solid black;
+  transform: translate(-24px, 20px);
+  position: relative;
+}
+.earring {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  bottom: 2px;
+  background: black;
+}
+
+.eye {
+  border-radius: 73% 27% 41% 59% / 100% 0% 100% 0%;
+  height: 20px;
+  width: 60px;
+  border-left: 5px solid black;
+  border-top: 3px solid black;
+  border-right: 3px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(-45deg);
+  bottom: 20px;
+  position: absolute;
+  top: 40%;
+  left: 60%;
+}
+
+.eye::before {
+  position: absolute;
+  height: 21px;
+  width: 50px;
+  content: "";
+  border-radius: 73% 27% 83% 17% / 100% 0% 100% 0%;
+  border-bottom: 2px solid black;
+  transform: rotate(10deg) translate(3px, 2px);
+}
+
+.eye::after {
+  position: absolute;
+  height: 5px;
+  width: 10px;
+  content: "";
+  right: -5px;
+  top: -9px;
+  border-radius: 100% 0% 68% 32% / 100% 0% 100% 0%;
+  border-bottom: 2px solid black;
+  transform: rotate(-13deg);
+}
+
+.pupil {
+  position: absolute;
+  height: 20px;
+  width: 30px;
+  top:-4px;
+  border-radius: 65% 35% 75% 25% / 53% 3% 97% 47%;
+  background: black;
+  transform: translate(13px);
+	-webkit-animation: lookingAround 20s infinite;
+	animation: lookingAround 20s infinite;  
+}
+
+.shine {
+  position: absolute;
+  height: 5px;
+  width: 10px;
+  top: 10px;
+  right: 7px;
+  border-radius: 16% 84% 75% 25% / 96% 0% 100% 4%;
+  border-bottom: 2px solid white;
+}
+
+.eyelid {
+  position: absolute;
+  top: -5px;
+  width: 50px;
+  height: 30px;
+  border-radius: 12% 88% 68% 32% / 53% 22% 78% 47%;
+  border-top: 2px solid black;
+  transform: rotate(-4deg) translate(-3px, -4px);
+}
+.nose {
+  position: absolute;
+  top: 73%;
+  left: 65%;
+  transform: rotate(-45deg);
+  height: 20px;
+  width: 4px;
+  border-radius: 0% 100% 28% 72% / 39% 18% 82% 61%;
+  border-left: 2px solid black;
+}
+
+.mouth {
+  border-radius: 0% 100% 82% 18% / 100% 0% 100% 0%;
+  position: absolute;
+  top: 74%;
+  left: 75%;
+  border-bottom: 2px solid black;
+  height: 14px;
+  width: 38px;
+  transform: rotate(-50deg);
+}
+
+.brow {
+  border-radius: 24% 76% 99% 1% / 0% 65% 35% 100%;
+  height: 20px;
+  width: 70px;
+  position: absolute;
+  top: -30px;
+  border-top: 2px solid black;
+}
+
+.glasses {
+  position: absolute;
+  top: 51%;
+  left: 7%;
+  transform: rotate(-45deg);
+  width: 266px;
+  display: flex;
+}
+
+.frame {
+  width: calc(266px / 2 - 20px);
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.bridge {
+  width: 20px;
+  height: 10px;
+  border-radius: 5px;
+  border-top: 2px solid black;
+  margin-top: 25px;
+}
+
+.neck {
+  height: 70px;
+  width: 120px;
+  transform: translate(10px, -2px);
+  display: flex;
+  justify-content: space-around;
+}
+
+.neck .left {
+  border-radius: 20% 80% 97% 3% / 41% 27% 73% 59%;
+  border-right: 2px solid black;
+  width: 20px;
+  transform: translate(-20px, 20px);
+}
+
+.neck .right {
+  border-radius: 65% 35% 56% 44% / 3% 97% 3% 97%;
+  border-left: 2px solid black;
+  border-top: 1px solid transparent;
+  width: 40px;
+  transform: translate(40px, -7px);
+}
+
+.shirt {
+  background: black;
+  width: 450px;
+  height: 100px;
+  transform: translate(30px, -15px);
+  border-radius: 88% 12% 100% 0% / 94% 100% 0% 6%;
+}
+#cssHead {
+	margin: 20px auto;
+	width: 180px;
+	background-color: #fff;
+	height: 180px;
+	-webkit-border-radius: 500px;
+	border-radius: 500px;
+	border: 3px solid #000;
+	-moz-transform: rotate(-2deg) skew(-3deg, -2deg);
+	-webkit-transform: rotate(-2deg) skew(-3deg, -2deg);
+	-o-transform: rotate(-2deg) skew(-3deg, -2deg);
+	-ms-transform: rotate(-2deg) skew(-3deg, -2deg);
+	transform: rotate(-2deg) skew(-3deg, -2deg);
+}
+.cssEye {
+	display: inline-block;
+}
+.cssPupil {
+	width: 12px;
+	background: #000;
+	height: 12px;
+	margin: 6px 0px 3px 8px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+.cssEyeLid {
+	border: 1px solid #000;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	overflow: hidden;
+	height: 20px;
+	margin: 0;
+}
+.htmlEye {
+	border: 1px solid #000;
+	display: inline-block;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+.wraphtmlEye {
+	background-color: #DDD;
+	margin: 6px;
+	padding: 4px;
+	width: 25px;
+	height: 25px;
+}
+.htmlPupil {
+	width: 12px;
+	background: #000;
+	height: 12px;
+	margin: 6px 4px 3px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+.rightEye {
+	margin: 0;
+}
+.leftEye {
+	margin: 50px 4px 0px 66px;
+}
+.cssMouth {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 4px solid #000;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	height: 20px;
+	width: 45px;
+	margin: 0px auto 0;
+    bottom: 20px;
+    position: absolute;
+    top: 75%;
+    left: 69%;
+    transform: rotate(-52deg);    
+}
+
+/*CSS head animation BEGIN*/
+#cssHead_remove {
+	-webkit-animation: headRotations 10s infinite;
+	animation: headRotations 10s infinite;
+}
+@-webkit-keyframes headRotations {
+	0% {	-webkit-transform: rotate(-2deg) skew(-3deg, -2deg);	}
+	20% {	-webkit-transform: rotate(2deg) skew(-3deg, -2deg);		}
+	25% {	-webkit-transform: rotate(-4deg) skew(-3deg, -2deg);	}
+	28% {	-webkit-transform: rotate(-2deg) skew(-3deg, -2deg);	}
+	40% {	-webkit-transform: rotate(-2deg) skew(-3deg, -2deg);	}
+	50% {	-webkit-transform: rotate(2deg) skew(-3deg, -2deg);		}
+	60% {	-webkit-transform: rotate(-6deg) skew(-3deg, -2deg);	}
+	70% {	-webkit-transform: rotate(6deg) skew(-3deg, -2deg);		}
+	90% {	-webkit-transform: rotate(6deg) skew(-3deg, -2deg);		}
+	100% {	-webkit-transform: rotate(-2deg) skew(-3deg, -2deg);	}
+}
+@keyframes headRotations {
+	0% {	transform: rotate(-2deg) skew(-3deg, -2deg);	}
+	20% {	transform: rotate(2deg) skew(-3deg, -2deg);		}
+	25% {	transform: rotate(-4deg) skew(-3deg, -2deg);	}
+	28% {	transform: rotate(-2deg) skew(-3deg, -2deg);	}
+	40% {	transform: rotate(-2deg) skew(-3deg, -2deg);	}
+	50% {	transform: rotate(2deg) skew(-3deg, -2deg);		}
+	60% {	transform: rotate(-6deg) skew(-3deg, -2deg);	}
+	70% {	transform: rotate(6deg) skew(-3deg, -2deg);		}
+	90% {	transform: rotate(6deg) skew(-3deg, -2deg);		}
+	100% {	transform: rotate(-2deg) skew(-3deg, -2deg);	}
+}
+/*CSS head animation END*/
+/*CSS pupils animation BEGIN*/
+.cssPupil {
+	-webkit-animation: lookingAround 20s infinite;
+	animation: lookingAround 20s infinite;
+}
+@-webkit-keyframes lookingAround {
+	0% {	margin: 6px 0px 3px 8px;	}
+	10% {	margin: 6px 0px 3px 8px;	}
+	12% {	margin: 6px 8px 3px 0px;	}
+	27% {	margin: 6px 8px 3px 0px;	}
+	30% {	margin: 6px 0px 3px 8px;	}
+	40% {	margin: 6px 0px 3px 8px;	}
+	43% {	margin: 1px 0px 8px 8px;	}
+	46% {	margin: 6px 0px 3px 8px;	}
+	57% {	margin: 6px 0px 3px 8px;	}
+	60% {	margin: 6px 8px 3px 0px;	}
+	63% {	margin: 6px 0px 3px 8px;	}
+	77% {	margin: 6px 0px 3px 8px;	}
+	80% {	margin: 6px 4px 3px 4px;	}
+	85% {	margin: 6px 4px 3px 4px;	}
+	88% {	margin: 6px 0px 3px 8px;	}
+	92% {	margin: 6px 0px 3px 8px;	}
+	100% {	margin: 6px 0px 3px 8px;	}
+}
+@keyframes lookingAround {
+	0% {	margin: 6px 0px 3px 8px;	}
+	10% {	margin: 6px 0px 3px 8px;	}
+	12% {	margin: 6px 8px 3px 0px;	}
+	27% {	margin: 6px 8px 3px 0px;	}
+	30% {	margin: 6px 0px 3px 8px;	}
+	40% {	margin: 6px 0px 3px 8px;	}
+	43% {	margin: 1px 0px 8px 8px;	}
+	46% {	margin: 6px 0px 3px 8px;	}
+	57% {	margin: 6px 0px 3px 8px;	}
+	60% {	margin: 6px 8px 3px 0px;	}
+	63% {	margin: 6px 0px 3px 8px;	}
+	77% {	margin: 6px 0px 3px 8px;	}
+	80% {	margin: 6px 4px 3px 4px;	}
+	85% {	margin: 6px 4px 3px 4px;	}
+	88% {	margin: 6px 0px 3px 8px;	}
+	92% {	margin: 6px 0px 3px 8px;	}
+	100% {	margin: 6px 0px 3px 8px;	}
+}
+/*CSS pupils animation END*/
+/*CSS blinking BEGIN*/
+.cssEyeLid {
+	-webkit-animation: blinkingEye 7s infinite;
+	animation: blinkingEye 7s infinite;
+}
+@-webkit-keyframes blinkingEye {
+	0% {	height: 20px;	margin: 0;	}
+	58% {	height: 20px;	margin: 0;	}
+	60% {	height: 0px;	margin: 10px 0;	}
+	66% {	height: 20px;	margin: 0;	}
+	100% {	height: 20px;	margin: 0;	}
+}
+@keyframes blinkingEye {
+	0% {	height: 20px;	margin: 0;	}
+	58% {	height: 20px;	margin: 0;	}
+	60% {	height: 0px;	margin: 10px 0;	}
+	66% {	height: 20px;	margin: 0;	}
+	100% {	height: 20px;	margin: 0;	}
+}
+/*CSS blinking END*/
+/*CSS smiling animation BEGIN*/
+.cssMouth {
+	-webkit-animation: smilingMouth 8s infinite;
+	animation: smilingMouth 8s infinite;
+}
+@-webkit-keyframes smilingMouth {
+	0% {	height: 20px;	border-bottom: 3px solid #000;	margin: 0px auto 0;		}
+	20% {	height: 35px;	border-bottom: 6px solid #000;	margin: -10px auto 0;	}
+	80% {	height: 35px;	border-bottom: 6px solid #000;	margin: -10px auto 0;	}
+	100% {	height: 20px;	border-bottom: 3px solid #000;	margin: 0px auto 0;		}
+}
+@keyframes smilingMouth {
+	0% {	height: 20px;	border-bottom: 3px solid #000;	margin: 0px auto 0;		}
+	20% {	height: 35px;	border-bottom: 6px solid #000;	margin: -10px auto 0;	}
+	80% {	height: 35px;	border-bottom: 6px solid #000;	margin: -10px auto 0;	}
+	100% {	height: 20px;	border-bottom: 3px solid #000;	margin: 0px auto 0;		}
+}
+/*CSS smiling animation END*/
+.hide{display:none;}
+.eye.left .pupil{border-radius: 75% 25% 65% 35% / 97% 47% 57% 3%;transform: rotate(15deg);
+    left: 16%;}
+.eye.left{left: 30%;top: 74%;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 5px solid transparent;
+    border-bottom: 2px solid transparent;
+    transform: rotate(-40deg);
+
+
+}
+.tshirtneck{
+background: #ffffff;
+    height: 50px;
+    width: 120px;
+    position: absolute;
+    left: 34%;
+    border-radius: 78% 47% 100% 45%;
+    }
+.belowmouth{
+left: 87%;
+    top: 85%;
+    transform: rotate(41deg);}    
+</style>
+
+<body>
+  <div class="people">
+    <div class="people-headr">
+      <div class="head">
+        <div class="people-hair">
+          <div class="top">
+            <div class="fringe"></div>
+            <div class="tail hide"></div>
+            <div class="large-tail"></div>
+            <div class="top-left"></div>
+            <div class="top-right"></div>
+          </div>
+        </div>
+        <div class="face">
+          <div class="eye left">
+            <div class="brow"></div>
+            <div class="eyelid"></div>
+            <div class="pupil">
+              <div class="shine"></div>
+            </div>
+          </div>
+          <div class="eye right">
+            <div class="brow"></div>
+            <div class="eyelid"></div>
+            <div class="pupil">
+              <div class="shine"></div>
+            </div>
+          </div>          
+          <div class="nose left"></div>
+          <div class="nose belowmouth"></div>
+          <div class="cssMouth"></div>
+        </div>
+      </div>
+      <div class="ear"><div class="earring"></div>
+      </div>
+    </div>
+    <div class="neck">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <div class="shirt"><div class="tshirtneck"></div></div>
+  </div>
+
+</body>
+</html>
